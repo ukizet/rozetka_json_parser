@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-# Проходимося по кожному товару на сторінці на зберігаємо його назву й ціну в словник
+# Проходимося по кожному товару на сторінці та зберігаємо його назву й ціну в словник
 
 def get_titles_and_prices(element_class, title_class, value_class, symbols_to_replace_with_space):
     for item in soup.find_all('div', class_=element_class):
