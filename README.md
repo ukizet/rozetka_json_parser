@@ -1,3 +1,3 @@
-# rozetka_to_json_scraper
+# rozetka_to_json_parser
 
-This program is created to scrap data from site "rozetka" to json file. This program will scrap this site every 5 minutes
+This program is created to parse data from site "rozetka" to json file. 
