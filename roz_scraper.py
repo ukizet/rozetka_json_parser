@@ -15,10 +15,15 @@ def get_titles_and_prices(element_class, title_class, value_class, symbols_to_re
 
     pass
 
+def save_to_json(file_name):
+    with open(file_name, 'w', encoding="utf-8") as file:
+        json.dump(prices, file, ensure_ascii=False)
+        pass
+
 def main():
     # Вставляємо лінку
 
-    url = 'https://rozetka.com.ua/ua/notebooks/c80004/'
+    url = 'https://rozetka.com.ua/ua/mobile-phones/c80003/'
 
     response = requests.get(url)
 
@@ -32,9 +37,7 @@ def main():
 
     # Зберігаємо словник в json файл
 
-    with open('index.json', 'w', encoding="utf-8") as file:
-        json.dump(prices, file, ensure_ascii=False)
-        pass
+    save_to_json('ex1.json')
 
 if __name__ == '__main__':
     main()
