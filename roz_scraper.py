@@ -9,13 +9,13 @@ def get_titles_and_prices(element_class, title_class, value_class, symbols_to_re
         price = item.find('span', class_=value_class)
         price = price.text.replace(symbols_to_replace_with_space, ' ')
 
-        prices[name.text] = price
+        prices[name.text.strip()] = price
 
     pass
 
 def save_to_json(file_name):
     with open(file_name, 'w', encoding="utf-8") as file:
-        json.dump(prices, file, ensure_ascii=False)
+        json.dump(prices, file, indent=4, ensure_ascii=False)
         pass
 
 def main():
