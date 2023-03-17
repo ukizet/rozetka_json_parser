@@ -26,7 +26,7 @@ def main():
     response = requests.get(url)
 
     global soup
-    soup = BeautifulSoup(response.text, 'html.parser')
+    soup = BeautifulSoup(response.text, 'lxml')
 
     global prices
     prices = {}
